@@ -1,0 +1,637 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+
+:root{
+    --font--:'Montserrat', sans-serif;
+
+    --black: #0a0a0aff;
+    --eerie-black: #1a181aff;
+    --red: #d1342fff;
+
+    --black-olive: #434038ff;
+
+    --white: rgb(255, 255, 255);
+}
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    
+        list-style: none;
+    
+}
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+body{
+    font-family: var(--font--);
+}
+
+header{
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+	align-items: center;}
+
+
+.logo{
+		width: 10%;
+		padding: 1rem;
+	}
+.logo img{
+		max-width: 54%;
+	}
+.nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav ul li{
+    margin-right: 3rem;
+}
+
+.nav ul li a{
+    font-weight: 200;
+	padding: 0.5rem;
+	transition: 0.8s;
+}
+.nav ul li a:hover{
+border-bottom: 1px solid var(--white);
+}
+
+
+
+.social ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.social ul li{
+    margin-right: 2rem;
+}
+
+
+.social ul li i{
+    border: 1px solid var(--white);
+    padding: 0.3rem;
+    transition: all ease 0.5s;
+
+}
+.social ul li i:hover{
+    background-color: var(--white);
+    color: var(--black);
+
+    
+}
+
+
+
+
+button{
+    background: var(--black);
+    border: 1px solid;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+	transition: 0.5s;
+}
+button:hover{
+    background: transparent;
+
+	
+}
+.wrapper{
+    margin: auto;
+    width: 90%;
+    margin-top:5rem ;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  max-width: 1000px;
+      list-style: none;
+      text-align: center;
+	  margin-bottom: -9rem;
+}
+
+/* Common style */
+.card figure {
+  position: relative;
+  overflow: hidden;
+  background: #3085a3;
+  text-align: center;
+}
+
+.card figure img {
+	position: relative;
+	display: block;
+	height: 30rem;
+	width: 100%;
+	opacity: 0.8;
+	object-fit: cover;
+}
+
+.card figure figcaption {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.card figure figcaption::before,
+.card figure figcaption::after {
+	pointer-events: none;
+}
+
+.card figure figcaption,
+.card figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Anchor will cover the whole item by default */
+.card figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.card figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.card figure h2 span {
+	font-weight: 800;
+}
+
+.card figure h2,
+.card figure p {
+	margin: 0;
+}
+
+.card figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+
+/*---------------*/
+/***** Ming *****/
+/*---------------*/
+
+figure.effect-ming {
+	background: #030c17;
+    height: 70%;
+    width: 100%;
+}
+
+figure.effect-ming img {
+	opacity: 0.9;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+
+}
+
+figure.effect-ming figcaption::before {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.4,1.4,1);
+	transform: scale3d(1.4,1.4,1);
+}
+
+figure.effect-ming h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+  margin-top:2rem;
+}
+
+figure.effect-ming p {
+	padding: 1em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+figure.effect-ming:hover h2 {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+figure.effect-ming:hover figcaption::before,
+figure.effect-ming:hover p {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-ming:hover figcaption {
+	background-color: rgba(58,52,42,0);
+}
+
+figure.effect-ming:hover img {
+	opacity: 0.4;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 50em) {
+	.card figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
+
+
+
+
+
+/*---------------*/
+/***** Ruby *****/
+/*---------------*/
+
+figure.effect-ruby {
+	background-color: #17819c;
+    height: 70%;
+    width: 100%;
+}
+
+figure.effect-ruby img {
+	opacity: 0.7;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+figure.effect-ruby:hover img {
+	opacity: 0.5;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-ruby h2 {
+	margin-top: 3rem;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-ruby p {
+	padding: 1em;
+	border: 1px solid #fff;
+	width: 80%;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0) scale(1.1);
+	transform: translate3d(0,20px,0) scale(1.1);
+} 
+
+figure.effect-ruby:hover h2 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-ruby:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0) scale(1);
+	transform: translate3d(0,0,0) scale(1);
+}
+
+/*---------------*/
+
+
+
+
+.wrapper2 {
+    text-align: center;
+}
+
+.wrapper2 h1,h2{
+    font-weight: 400;
+}
+
+.follow ul{
+    display: flex;
+    flex-direction: row;
+	    justify-content: center;
+}
+
+.follow ul li{
+    margin-right: 2rem;
+}
+
+
+.follow ul li i{
+    border: 1px solid var(--black);
+    padding: 0.3rem;
+    transition: all ease 0.5s;
+	color: var(--white);
+    background-color: var(--black);
+	font-size: 1.5rem;
+
+
+}
+.follow ul li i:hover{
+	color: var(--black);
+	background-color: var(--white);
+
+
+
+    
+}
+
+
+footer{
+    display: flex;
+    background: black;
+    padding: 2rem;
+    color: #fff;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+	/* CSS */
+	
+  }
+  
+  /* 
+	##Device = Laptops, Desktops
+	##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+	
+	.cards{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		gap: 1rem;
+		
+	}
+	.card figure figcaption {
+		font-size: 1rem;
+	}	
+	.wrapper2{
+		font-size: .7rem;
+	} 
+
+
+
+  }
+  
+  /* 
+	##Device = Tablets, Ipads (portrait)
+	##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+	
+	.cards{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		gap: 1rem;
+		
+	}
+	.card figure figcaption {
+		font-size: 1rem;
+	}	
+	.wrapper2{
+		font-size: .7rem;
+	} 
+
+
+	.social{
+		display: none;
+	}		
+  }
+  
+  /* 
+	##Device = Tablets, Ipads (landscape)
+	##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	
+	.cards{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		gap: 1rem;
+		
+	}
+	.card figure figcaption {
+		font-size: 1rem;
+	}	
+	.wrapper2{
+		font-size: .7rem;
+	} 
+
+
+	.social{
+		display: none;
+	}	
+  }
+  
+  /* 
+	##Device = Low Resolution Tablets, Mobiles (Landscape)
+	##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+	.logo {
+		width: 30%;
+		display: flex;
+		justify-content: center;
+	}
+	.cards{
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		gap: 1rem;
+		
+	}
+	.card figure figcaption {
+		font-size: 1rem;
+	}
+	.wrapper2{
+		font-size: .7rem;
+	}
+	footer{
+		font-size: .7rem;
+
+	}
+
+	header{
+		font-size: .8rem;
+		align-items: center;
+		flex-direction: column;
+		gap: 2rem;
+
+	}
+	.nav ul{
+		flex-direction: column;
+		align-items: center;
+	}
+	.nav ul li{
+		margin-bottom: 2rem;	}
+	.social{
+		display: none;
+	}
+		
+  }
+  
+  /* 
+	##Device = Most of the Smartphones Mobiles (Portrait)
+	##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+	.logo {
+		width: 30%;
+		display: flex;
+		justify-content: center;
+	}
+	.cards{
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		gap: 1rem;
+		
+	}
+	.card figure figcaption {
+		font-size: .7rem;
+	}	
+	.wrapper2{
+		font-size: .6rem;
+	} 
+	footer{
+		font-size: .5rem;
+
+	}
+	header{
+		font-size: .8rem;
+		align-items: center;
+		flex-direction: column;
+		gap: 2rem;
+
+	}
+	.nav ul{
+		flex-direction: column;
+		align-items: center;
+	}
+	.nav ul li{
+		margin-bottom: 2rem;	}
+	.social{
+		display: none;
+	}
+  }
+
+
+
+
+
+
+
+
+
+  form{
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	flex-direction: column;
+}
+  .inpu{
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+
+  input, textarea {
+    border: 1px solid #818a91;
+    background-color: transparent;
+    color: #373a3c;
+    padding: 0.8rem 7rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: 200;	}
+
+	.wrapper2 i{
+		margin-right: 1rem;
+	}

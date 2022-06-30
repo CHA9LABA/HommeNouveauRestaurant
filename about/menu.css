@@ -1,0 +1,19 @@
+@import"../style.css";
+
+
+
+.menu {
+    width: 90%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+}
+
+
+
+.menu img{
+    width: 100%;
+	object-fit: cover;
+}
+
